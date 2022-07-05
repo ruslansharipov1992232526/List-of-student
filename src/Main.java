@@ -13,21 +13,20 @@ public class Main {
             System.out.println("Иванов Петр Николаевич, 1243-Б, 31231343 <enter>");
 
             String input = scanner.nextLine();
-            String[] t = input.split(" ");
+            String[] t = input.split(", ");
             String a = t[0];
+            if (a.equals("end")) {
+                System.out.println("Список студентов: ");
+                for (Student info : infoStudent) {
+                    System.out.println(" - " + info);
+                }
+                return;
+            }
             String b = t[1];
             String c = t[2];
 
             infoStudent.add(new Student(a, b, c));
             System.out.println(infoStudent);
-
-
-            if (input.equals("end")) {
-                System.out.println("Список студентов: ");
-                for (Student info : infoStudent) {
-                    System.out.println(" - " + info);
-                }
-            }
         }
     }
 }
