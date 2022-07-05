@@ -26,7 +26,6 @@ public class Main {
             String c = t[2];
 
             infoStudent.add(new Student(a, b, c));
-            System.out.println(infoStudent);
         }
     }
 }
